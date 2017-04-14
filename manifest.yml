@@ -1,0 +1,12 @@
+---
+applications:
+- name: bigchain-service-registry
+  memory: 512M
+  instances: 1
+  host: eureka-service-${random-word}
+  domain: cfapps.io
+  path: target/bigchain-service-registry.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    DEBUG: "true"
+    debug: "true"
